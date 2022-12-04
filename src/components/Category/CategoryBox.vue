@@ -1,7 +1,6 @@
 <template>
-   <div class="container">
+<div class="container">
         <div class="row my-5">
-
             <div class="col-md-3 col-sm-6">
                 <div class="card box border-0 shadow mb-3" id="box1">
                     <img src="images/website-design.png" alt="webdesign" class="my-2 mx-auto d-block">

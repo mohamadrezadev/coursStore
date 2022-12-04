@@ -10,10 +10,10 @@ app.use(router)
 
 app.mount('#app')
 
-const app2 = createApp(App2)
+// const app2 = createApp(App2)
 
-app2.use(router)
+// app2.use(router)
 
-app2.mount('#app2')
+// app2.mount('#app2')
 
 
