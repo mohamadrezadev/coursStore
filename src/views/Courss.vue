@@ -1,10 +1,11 @@
 <script setup>
-import Cours from '../components/Courses/Cours.vue';
+
+import ListCourss from '../components/Courses/ListCourss.vue';
 
 
 </script>
 <template>
-    <Cours/>
+    <ListCourss/>
 </template>
 
 

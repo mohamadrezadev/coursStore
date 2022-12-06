@@ -36,7 +36,12 @@ import Navbar from './Navbar.vue';
                                         <small className=" mt-3 mr-2 d-block">آموزش امنیت در PHP (64.000 تومان)</small>
                                     </div>
                                 </li>
-                                <li><button className="btn btn-info m-1 ml-3 font-12">پرداخت</button>
+                                <li>
+                                    <router-link to="/Panel" className="btn btn-info m-1 ml-3 font-12">
+                                        <p>
+                                            پرداخت
+                                        </p>
+                                    </router-link>                            
                                     <div className="float-right">
                                         <small className=" mt-3 mr-2 d-block">قیمت کل : 128.000 تومان</small>
                                     </div>
@@ -44,9 +49,8 @@ import Navbar from './Navbar.vue';
                             </ul>
                         </div>  
                     </a>
-                    <a href="sign-up.html" className="btn btn-outline-info font-13 vazir-med-fa"><i className="fa fa-user-plus pl-1"></i>ثبت نام</a>
-                    <a href="login.html" className="btn btn-info font-13 vazir-med-fa mx-2">ورود</a>
-                    <a href="teach.html" className="btn btn-primary font-13 vazir-med-fa">مدرس شوید</a>
+                    <a href="" className="btn btn-outline-info font-13 vazir-med-fa"><i className="fa fa-user-plus pl-1"></i>ثبت نام</a>
+                    <a href="" className="btn btn-info font-13 vazir-med-fa mx-2">ورود</a>
                 </div>
 
             </div>
