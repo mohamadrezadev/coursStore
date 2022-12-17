@@ -1,6 +1,6 @@
 <template>
-   <div className="col-lg-4 col-md-6 col-sm-12">
-    <div className="card custom-card mb-3">
+  <div className="col-lg-4 col-md-6 col-sm-12" >
+    <div className="card custom-card mb-3" >
       <div className="sub-layer">
         <img
           src="images/bootstrap.jpg"
@@ -14,6 +14,7 @@
           ></span>
         </div>
       </div>
+
       <div className="card-body">
         <a href="course.html" className="card-link">آموزش جامع Bootstrap 4</a>
         <p className="text-justify card-text vazir font-14 mt-3">
@@ -34,7 +35,14 @@
 </template>
 
 <script setup>
-
+const props=defineProps(["product"])
+// const users =ref([])
+//     function GetUsers(){
+//         fetch("https://jsonplaceholder.typicode.com/users")
+//         .then(response=>response.json())
+//         .then(data=>users.value=data)
+//     }
+//     GetUsers()
 </script>
 
 <style>
