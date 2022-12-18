@@ -8,7 +8,7 @@ import Navbar from './Navbar.vue';
             <div className="row pb-3">
 
                 <div className="d-none d-lg-block col-lg-2">
-                    <img src="images/logo.jpg" alt="EasyLearn" title="EasyLearn" className="img-fluid"/>
+                    <img src="images/minlogo.jpg" alt="EasyLearn" title="EasyLearn" className="img-fluid"/>
                 </div>
 
                 <div className="d-none d-lg-flex col-lg-6 align-items-center search-box">
@@ -38,19 +38,19 @@ import Navbar from './Navbar.vue';
                                 </li>
                                 <li>
                                     <router-link to="/Panel" className="btn btn-info m-1 ml-3 font-12">
-                                        <p>
+                                        <p class="text-dark">
                                             پرداخت
                                         </p>
-                                    </router-link>                            
+                                    </router-link>
                                     <div className="float-right">
                                         <small className=" mt-3 mr-2 d-block">قیمت کل : 128.000 تومان</small>
                                     </div>
                                 </li>
                             </ul>
-                        </div>  
+                        </div>
                     </a>
-                    <a href="" className="btn btn-outline-info font-13 vazir-med-fa"><i className="fa fa-user-plus pl-1"></i>ثبت نام</a>
-                    <a href="" className="btn btn-info font-13 vazir-med-fa mx-2">ورود</a>
+                    <a href="" className="btn btn-outline-info font-13 vazir-med-fa"><i className="fa fa-user-plus pl-1"><router-link to="/register" class="text-secondary">ثبت نام </router-link></i> </a>
+                    <a href="" className="btn btn-info font-13 vazir-med-fa mx-2"><i><router-link to="/login" class="text-dark">ورود</router-link></i></a>
                 </div>
 
             </div>
@@ -85,7 +85,7 @@ import Navbar from './Navbar.vue';
                             </ul>
                         </div>
                     </a>
-                    <a href="#search" data-toggle="collapse"><i className="fa fa-search"></i></a>
+                    <a href="#" data-toggle="collapse"><i className="fa fa-search"></i></a>
                 </div>
 
                 <div id="search" className=" d-lg-none col-10 mx-auto collapse mb-4 justify-content-center">

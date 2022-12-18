@@ -1,16 +1,16 @@
 <script setup>
 import CoursItem from '../Courses/CoursItem.vue';
 import {ref} from 'vue';
+
 const products =ref([])
     function Getproduct(){
-        fetch("https://jsonplaceholder.typicode.com/posts")
-        .then(response=>response.json())
-        .then(data=>products.value=data)
+        fetch('https://fakestoreapi.com/products/1')
+                .then(res=>res.json())
+                .then(data=>products.value=data)
+                .then(json=>console.log(json))
+
     }
-Getproduct()
-for (var product in products){
-    console.log(product.title);
-}
+
 </script>
 <template>
 <div className="container my-3">

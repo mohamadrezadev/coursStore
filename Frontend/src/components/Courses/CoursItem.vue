@@ -16,7 +16,7 @@
       </div>
 
       <div className="card-body">
-        <a href="course.html" className="card-link">آموزش جامع Bootstrap 4</a>
+        <a href="course.html" className="card-link">آموزش جامع Bootstrap 4 {{props.product}}</a>
         <p className="text-justify card-text vazir font-14 mt-3">
           لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
           از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
@@ -36,6 +36,7 @@
 
 <script setup>
 const props=defineProps(["product"])
+console.log(props.product);
 // const users =ref([])
 //     function GetUsers(){
 //         fetch("https://jsonplaceholder.typicode.com/users")
