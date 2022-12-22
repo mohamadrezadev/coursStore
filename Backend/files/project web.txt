@@ -1,0 +1,13 @@
+login and register 
+api list employs or ...
+form counran us  and post data to api
+searching
+
+
+rest درواقع یه اصولی است در طراحی ای پی ای 
+serveradres/api/version/name entites ===> URI  uneversal resurce identifier 
+
+pach وقتی یی دو فیلد را بخواهیم تغییر دهیم 
+
+Head اخیرین تغیرات را نشان میدهد
+

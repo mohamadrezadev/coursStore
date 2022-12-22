@@ -7,9 +7,9 @@ import SatusMenu from './SatusMenu.vue';
 
 </script>
 <template>
-    <SatusMenu/>
-    <div className="container">
-        <div className="row">
+    <div class="container">
+        <SatusMenu/>
+        <div class="row">
             <InfoCours/>
             <DetailCours/>
         </div>

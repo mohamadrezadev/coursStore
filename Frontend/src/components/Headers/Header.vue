@@ -49,8 +49,8 @@ import Navbar from './Navbar.vue';
                             </ul>
                         </div>
                     </a>
-                    <a href="" className="btn btn-outline-info font-13 vazir-med-fa"><i className="fa fa-user-plus pl-1"><router-link to="/register" class="text-secondary">ثبت نام </router-link></i> </a>
-                    <a href="" className="btn btn-info font-13 vazir-med-fa mx-2"><i><router-link to="/login" class="text-dark">ورود</router-link></i></a>
+                    <router-link to="/register"  className="btn btn-outline-info font-13 vazir-med-fa"><i className="fa fa-user-plus pl-1"><router-link to="/register" class="text-secondary">ثبت نام </router-link></i> </router-link>
+                    <router-link to="/login"  className="btn btn-info font-13 vazir-med-fa mx-2"><i><router-link to="/login" class="text-dark">ورود</router-link></i></router-link>
                 </div>
 
             </div>

@@ -1,28 +1,25 @@
 <script setup>
 import CoursItem from '../Courses/CoursItem.vue';
-import {ref} from 'vue';
+import {ref,onMounted  } from 'vue';
+import axios from 'axios';
+const products = ref([])
 
-const products =ref([])
-    function Getproduct(){
-        fetch('https://fakestoreapi.com/products/1')
-                .then(res=>res.json())
-                .then(data=>products.value=data)
-                .then(json=>console.log(json))
-
-    }
-
+onMounted (() => {
+    axios
+      .get('http://127.0.0.1:8000/api/product')
+      .then(res => products.value=res.data)
+    
+  console.log(products);
+})
 </script>
 <template>
 <div className="container my-3">
-    <div className="row">
-        <CoursItem/>
-        <CoursItem/>
-        <CoursItem/>
-        <CoursItem/>
-        <CoursItem/>
-        <CoursItem/>
-        <CoursItem/>
-        <CoursItem/>
+    <div class="container " >
+        <div class="row "   >
+<div class="col-4" v-for="product in products">
+    <CoursItem key="product.id" :product="product" />
+</div>
+        </div>
     </div>
 </div>
 </template>
