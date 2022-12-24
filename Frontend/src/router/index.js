@@ -4,9 +4,9 @@ import Home from '../views/Home.vue';
 import Panel from '../views/Panel.vue';
 import Login from '../views/Login.vue';
 import Register from '../views/Register.vue';
-import Courss from '../views/Courss.vue';
+import Courses from '../views/Courses.vue';
 import Blog from '../views/Blog.vue';
-import About from '../views/About.vue';
+import Contact from '../views/Contact.vue';
 ;
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,9 +22,9 @@ const router = createRouter({
       component:Blog
     },
     {
-      path: '/Courss',
+      path: '/Courses',
       name: 'courss',
-      component:Courss
+      component:Courses
     },
     {
       path: '/login',
@@ -42,9 +42,9 @@ const router = createRouter({
       component:Panel
     },
     {
-      path: '/about',
-      name: 'about',
-      component:About
+      path: '/contact',
+      name: 'contact',
+      component:Contact
 
     }
   ]

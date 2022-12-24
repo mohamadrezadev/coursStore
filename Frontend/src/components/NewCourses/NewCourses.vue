@@ -1,7 +1,7 @@
 <template>
   <TitleBox title=" جدیدترین دوره های آموزشی" />
-  <div className="container my-3">
-    <div className="row">
+  <div class="container my-3">
+    <div class="row">
       <Course  />
       <Course />
       <Course />
