@@ -1,5 +1,46 @@
 {
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "This template should help get you started developing with Vue 3 in Vite.",
+  "main": "vite.config.js",
   "dependencies": {
-    "axios": "^1.2.1"
-  }
+    "asynckit": "^0.4.0",
+    "axios": "^1.2.1",
+    "combined-stream": "^1.0.8",
+    "csstype": "^3.1.1",
+    "delayed-stream": "^1.0.0",
+    "follow-redirects": "^1.15.2",
+    "form-data": "^4.0.0",
+    "mime-db": "^1.52.0",
+    "mime-types": "^2.1.35",
+    "nanoid": "^3.3.4",
+    "picocolors": "^1.0.0",
+    "pinia": "^2.0.28",
+    "postcss": "^8.4.20",
+    "proxy-from-env": "^1.1.0",
+    "source-map": "^0.6.1",
+    "source-map-js": "^1.0.2",
+    "vite": "^4.0.3",
+    "vue": "^3.2.45",
+    "vue-router": "^4.1.6",
+    "vue-toast-notification": "^0.6.3",
+    "vue3-toastify": "^0.0.4"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:unit": "vitest --environment jsdom --root src/"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitejs/plugin-vue-jsx": "^3.0.0",
+    "@vue/test-utils": "^2.2.6",
+    "jsdom": "^20.0.3",
+    "vite": "^4.0.0",
+    "vitest": "^0.25.6"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
