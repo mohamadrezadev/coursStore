@@ -13,7 +13,7 @@ from Data.db_user import getUserByUsername
 router=APIRouter(tags=['authentication'])
 
 @router.post('/signin')
-def get_token(request:OAuth2PasswordRequestForm=Depends(),
+def login(request:OAuth2PasswordRequestForm=Depends(),
                 db:Session=Depends(get_db)):
 
     # user = db.query(models.DbUser).filter(models.DbUser.username == request.username).first()
@@ -36,7 +36,7 @@ class Response(BaseModel):
     Token:str
 
 @router.post("/signup" )
-async def Create_user(user:UserBase, db=Depends(get_db)):
+async def Register(user:UserBase, db=Depends(get_db)):
     result= db_user.create_user(db,user)
     if result!=False:
         print("User created successfully")
