@@ -21,7 +21,7 @@ const OnSubmitForm=()=>{
      .then(response => {
         console.log(response);
         if (response.data) {
-          notify("ثبت نام موفقیت امیز بود")
+          notify("ورود موفقیت آمیز  ")
           localStorage.setItem('TOKEN',response.data.access_token)
           router.push({ path: '/' })
         }

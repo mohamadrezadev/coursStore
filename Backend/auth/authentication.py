@@ -11,9 +11,12 @@ from auth import oauth2
 from Data import models
 from Data.db_user import getUserByUsername
 router=APIRouter(tags=['authentication'])
+class User_login(BaseModel):
+    username:str
+    password:str
 
 @router.post('/signin')
-def login(request:OAuth2PasswordRequestForm=Depends(),
+def login(request:User_login,
                 db:Session=Depends(get_db)):
 
     # user = db.query(models.DbUser).filter(models.DbUser.username == request.username).first()
@@ -31,12 +34,11 @@ def login(request:OAuth2PasswordRequestForm=Depends(),
         'userID': user.id,
         'username': user.username
     }
-class Response(BaseModel):
-    UserData:userDisplay
-    Token:str
+
 
 @router.post("/signup" )
 async def Register(user:UserBase, db=Depends(get_db)):
+    print(user)
     result= db_user.create_user(db,user)
     if result!=False:
         print("User created successfully")
