@@ -59,3 +59,4 @@ def updateUser(id:int,db:Session,request:UserBase):
     })
     db.commit()
     return 'updated successfully'
+

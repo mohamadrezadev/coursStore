@@ -1,26 +1,26 @@
 from fastapi import APIRouter,status,responses,Query,Body,Path ,Depends,Form
 from typing import Optional,List,Dict,Any
+from sqlalchemy.orm.session import Session
 from pydantic import BaseModel
 from Data.models import DbUser
 from schemas import UserBase,userDisplay
 from Data import  db_user
 from Data.Database import get_db
 import time
-
+from fastapi.security.oauth2 import OAuth2PasswordRequestForm
+from auth import oauth2
 
 router=APIRouter(prefix="/api/Users",tags=['users'])
 
-
-@router.post("/signup")
-async def Create_user(user:UserBase, db=Depends(get_db)):
-    return db_user.create_user(db,user)
-
-
-
-
 async def test_async():
-    time.sleep(10)
+    time.sleep(2)
     return '1'
+
+
+# @router.post("/signup")
+# async def Create_user(user:UserBase, db=Depends(get_db)):
+#     return db_user.create_user(db,user)
+
 
 @router.get("/get_All_users")
 async def get_all_users(db=Depends(get_db)):
@@ -39,16 +39,13 @@ async def update_user(id:int,user:UserBase,db=Depends(get_db)):
     return db_user.updateUser(id,db,user)
 
 
+@router.get('/me',description="get token and response is data user ")
+def  get_me(request:str,db=Depends(get_db)):
+    result= oauth2.get_current_user(request,db)
+    return result
 
 
-# class image(BaseModel):
-#     name:str
-#     alias =str
-# class data(BaseModel):
-#     title=str
-#     content:str
-#     metadata:Dict[str,str]={"key1": "value1"}
-#     image:image
+
 
 # @router.post("Create_user/{id}")
 # async def Create_user(user:User,id:int,version:int=1):
